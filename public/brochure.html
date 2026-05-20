@@ -1,0 +1,804 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+  <link rel="alternate icon" type="image/png" href="/fav.png" />
+  <title>Brown Theory | Client Story Brochure 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --ink: #22160f;
+      --coffee: #3a2618;
+      --gold: #b8893a;
+      --paper: #fffdf9;
+      --line: rgba(58, 38, 24, 0.2);
+      --muted: #655245;
+      --accent-bg: #f7f0e6;
+      --font-display: 'Cormorant Garamond', serif;
+      --font-body: 'Montserrat', sans-serif;
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body {
+      margin: 0;
+      padding: 0;
+      background: #ece7e0;
+      color: var(--ink);
+      font-family: var(--font-body);
+      line-height: 1.55;
+    }
+
+    .sheet {
+      width: 210mm;
+      min-height: 297mm;
+      margin: 14mm auto;
+      background: var(--paper);
+      box-shadow: 0 10px 35px rgba(10, 10, 10, 0.15);
+      border: 1px solid rgba(0, 0, 0, 0.04);
+      page-break-after: always;
+      overflow: hidden;
+    }
+
+    .sheet:last-child { page-break-after: auto; }
+
+    .top-bar {
+      height: 8mm;
+      background: linear-gradient(90deg, #2f1d12, #6b4326 52%, #2f1d12);
+    }
+
+    .content {
+      padding: 12mm 14mm 13mm;
+    }
+
+    .eyebrow {
+      margin: 0;
+      color: var(--gold);
+      text-transform: uppercase;
+      letter-spacing: 0.2em;
+      font-size: 9px;
+      font-weight: 600;
+    }
+
+    h1, h2, h3, h4 { margin: 0; color: var(--coffee); font-family: var(--font-display); }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.15fr 1fr;
+      gap: 8mm;
+      align-items: stretch;
+      margin-bottom: 8mm;
+    }
+
+    .hero h1 {
+      margin: 3mm 0 3mm;
+      font-size: 46px;
+      line-height: 0.93;
+      font-weight: 600;
+    }
+
+    .hero p {
+      margin: 0 0 4mm;
+      font-size: 11px;
+      color: var(--muted);
+    }
+
+    .hero-image {
+      min-height: 66mm;
+      position: relative;
+      border-radius: 3mm;
+      overflow: hidden;
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .stamp {
+      position: absolute;
+      right: 3mm;
+      bottom: 3mm;
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: #fff;
+      background: rgba(34, 22, 15, 0.66);
+      border: 1px solid rgba(255, 255, 255, 0.24);
+      padding: 1.3mm 2.2mm;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 2mm;
+    }
+
+    .pill {
+      border: 1px solid var(--line);
+      font-size: 8.5px;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      padding: 1.3mm 2.2mm;
+      color: var(--coffee);
+      background: #fff;
+    }
+
+    .section-title {
+      font-size: 30px;
+      line-height: 1;
+      margin-bottom: 2.5mm;
+    }
+
+    .section-intro {
+      margin: 0;
+      font-size: 10.5px;
+      color: var(--muted);
+    }
+
+    .grid-2 {
+      margin-top: 4.5mm;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4mm;
+    }
+
+    .card {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, #fffdf9 0%, #f8f1e7 100%);
+      padding: 4mm;
+    }
+
+    .card h3 {
+      font-size: 17px;
+      margin-bottom: 1.6mm;
+    }
+
+    .card p {
+      margin: 0;
+      font-size: 9.7px;
+      color: #4f3d31;
+      line-height: 1.6;
+    }
+
+    .timeline {
+      margin-top: 5mm;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 3mm;
+    }
+
+    .step {
+      border: 1px solid var(--line);
+      background: #fff;
+      padding: 3mm;
+    }
+
+    .step strong {
+      display: block;
+      font-family: var(--font-display);
+      color: var(--gold);
+      font-size: 18px;
+      line-height: 1;
+      margin-bottom: 1mm;
+    }
+
+    .step p {
+      margin: 0;
+      font-size: 8.5px;
+      color: #554134;
+      line-height: 1.5;
+    }
+
+    .quote {
+      margin-top: 5mm;
+      border: 1px solid var(--line);
+      background: linear-gradient(120deg, #2f1e13, #4c311f);
+      padding: 4mm;
+      color: #f7efe6;
+    }
+
+    .quote p {
+      margin: 0;
+      font-family: var(--font-display);
+      font-size: 22px;
+      line-height: 1.06;
+    }
+
+    .quote span {
+      display: block;
+      margin-top: 2mm;
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      color: rgba(247, 239, 230, 0.78);
+    }
+
+    .origin-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 4mm;
+      margin-top: 5mm;
+    }
+
+    .origin {
+      border: 1px solid var(--line);
+      padding: 4mm;
+      background: #fff;
+    }
+
+    .origin h3 {
+      font-size: 20px;
+      margin-bottom: 0.6mm;
+    }
+
+    .origin .meta {
+      font-size: 8px;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 1.8mm;
+      display: block;
+    }
+
+    .origin p {
+      margin: 0;
+      font-size: 9.2px;
+      color: #534033;
+      line-height: 1.6;
+    }
+
+    .programs {
+      margin-top: 5mm;
+      border: 1px solid var(--line);
+      background: var(--accent-bg);
+      padding: 4mm;
+    }
+
+    .programs h3 {
+      font-size: 22px;
+      margin-bottom: 2mm;
+    }
+
+    .program-list {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5mm 4mm;
+    }
+
+    .program-list li {
+      font-size: 9px;
+      color: #4f3d31;
+      padding-left: 2.2mm;
+      position: relative;
+    }
+
+    .program-list li::before {
+      content: '';
+      width: 1.2mm;
+      height: 1.2mm;
+      border-radius: 50%;
+      background: var(--gold);
+      position: absolute;
+      left: 0;
+      top: 1.5mm;
+    }
+
+    .catalog-title {
+      margin-bottom: 3mm;
+    }
+
+    .catalog-title h2 {
+      font-size: 31px;
+      line-height: 1;
+    }
+
+    .catalog-title p {
+      margin: 2mm 0 0;
+      font-size: 10px;
+      color: var(--muted);
+    }
+
+    .product-block {
+      border: 1px solid var(--line);
+      background: #fff;
+      margin-bottom: 3mm;
+      overflow: hidden;
+    }
+
+    .product-row {
+      display: grid;
+      grid-template-columns: 36mm 1fr;
+      min-height: 39mm;
+    }
+
+    .product-row img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .product-copy {
+      padding: 3mm 3.4mm;
+    }
+
+    .product-head {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 3mm;
+      margin-bottom: 1.4mm;
+    }
+
+    .product-head h4 {
+      font-size: 18px;
+      line-height: 1;
+    }
+
+    .price {
+      font-size: 12px;
+      color: var(--gold);
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .product-meta {
+      margin: 0 0 1.2mm;
+      font-size: 8px;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+    }
+
+    .product-notes {
+      margin: 0 0 1mm;
+      font-size: 8.6px;
+      color: #4f3d31;
+      line-height: 1.5;
+    }
+
+    .product-desc {
+      margin: 0;
+      font-size: 8.8px;
+      color: #5d483a;
+      line-height: 1.55;
+    }
+
+    .tag {
+      display: inline-block;
+      margin-left: 1.2mm;
+      border: 1px solid rgba(184, 137, 58, 0.5);
+      color: #8f641d;
+      font-size: 7px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      padding: 0.6mm 1.1mm;
+      vertical-align: middle;
+    }
+
+    .footer-strip {
+      margin-top: 3.5mm;
+      padding-top: 3mm;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      font-size: 8px;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.07em;
+    }
+
+    .contact-band {
+      margin-top: 4mm;
+      border: 1px solid var(--line);
+      background: linear-gradient(120deg, rgba(58, 38, 24, 0.97), rgba(35, 23, 15, 0.97));
+      color: #f7efe6;
+      padding: 4mm;
+    }
+
+    .contact-band h3 {
+      color: #f7efe6;
+      font-size: 26px;
+      line-height: 0.95;
+      margin-bottom: 1.6mm;
+    }
+
+    .contact-band p {
+      margin: 0;
+      font-size: 9px;
+      color: rgba(247, 239, 230, 0.86);
+      line-height: 1.55;
+    }
+
+    .contact-grid {
+      margin-top: 2.8mm;
+      display: grid;
+      grid-template-columns: 1.3fr 1fr;
+      gap: 4mm;
+      align-items: end;
+    }
+
+    .contact-card {
+      border: 1px solid rgba(247, 239, 230, 0.24);
+      background: rgba(247, 239, 230, 0.06);
+      padding: 3mm;
+    }
+
+    .contact-card div {
+      font-size: 9px;
+      padding: 1.1mm 0;
+      border-bottom: 1px solid rgba(247, 239, 230, 0.12);
+    }
+
+    .contact-card div:last-child { border-bottom: 0; }
+
+    @page {
+      size: A4;
+      margin: 8mm;
+    }
+
+    @media print {
+      html, body { background: #fff; }
+      .sheet {
+        margin: 0;
+        width: 100%;
+        min-height: auto;
+        box-shadow: none;
+        border: 0;
+      }
+      .top-bar, .quote, .contact-band { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+    }
+  </style>
+</head>
+<body>
+  <section class="sheet">
+    <div class="top-bar"></div>
+    <div class="content">
+      <div class="hero">
+        <div>
+          <p class="eyebrow">Specialty Coffee Partner Profile 2026</p>
+          <h1>Brown<br/>Theory</h1>
+          <p>
+            Brown Theory builds coffee programs for premium cafes, hotels, offices, and retail brands.
+            We source directly from origin partners, roast in small batches, and deliver with full cup consistency.
+          </p>
+          <div class="pill-row">
+            <span class="pill">Direct Trade</span>
+            <span class="pill">12 Signature Coffees</span>
+            <span class="pill">4 Global Origins</span>
+            <span class="pill">Roast-to-Order Freshness</span>
+          </div>
+        </div>
+        <div class="hero-image">
+          <img src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?w=900&q=80" alt="Brown Theory coffee service" />
+          <span class="stamp">Client Story Brochure</span>
+        </div>
+      </div>
+
+      <h2 class="section-title">Our Story, In Service of Yours</h2>
+      <p class="section-intro">
+        We began with one belief: great coffee should tell a clear story from farm to cup. Every lot we buy is selected for flavor identity,
+        roast behavior, and repeatability in real service environments. That is how your guest gets the same exceptional cup every time.
+      </p>
+
+      <div class="grid-2">
+        <article class="card">
+          <h3>What Makes Brown Theory Different</h3>
+          <p>
+            We build long-term relationships with growers, cup every lot before purchase, and profile roasts for real-world bar workflows.
+            The outcome is not just premium coffee, but a dependable menu engine for your business.
+          </p>
+        </article>
+        <article class="card">
+          <h3>Designed for Client Growth</h3>
+          <p>
+            Whether you run a flagship cafe or a multi-location hospitality group, we support launch strategy, staff calibration,
+            rotation planning, and menu storytelling to improve both cup quality and customer retention.
+          </p>
+        </article>
+      </div>
+
+      <div class="timeline">
+        <div class="step"><strong>01</strong><p>Discovery call to align brew methods, expected volume, and quality goals.</p></div>
+        <div class="step"><strong>02</strong><p>Tasting kit and profile selection with recipe calibration for your service flow.</p></div>
+        <div class="step"><strong>03</strong><p>Roast and delivery plan built around your weekly or bi-weekly demand.</p></div>
+        <div class="step"><strong>04</strong><p>Launch support with training, quality checks, and seasonal menu rotations.</p></div>
+      </div>
+
+      <div class="quote">
+        <p>"Your first cup with us should feel intentional. Your hundredth should taste exactly as good."</p>
+        <span>Brown Theory Roastery Team</span>
+      </div>
+
+      <div class="footer-strip">
+        <span>Brown Theory</span>
+        <span>Specialty Coffee for Modern Brands</span>
+        <span>Bengaluru, India</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="top-bar"></div>
+    <div class="content">
+      <p class="eyebrow">Origin Narrative</p>
+      <h2 class="section-title">Where Our Flavor Stories Begin</h2>
+      <p class="section-intro">
+        Our portfolio is intentionally compact: four origins, each with distinct sensory character, harvest rhythm, and menu utility.
+        This keeps your coffee program focused, premium, and easy to communicate to customers.
+      </p>
+
+      <div class="origin-grid">
+        <article class="origin">
+          <h3>Ethiopia</h3>
+          <span class="meta">Yirgacheffe & Harrar | 1,800-2,200m | Harvest: Oct-Jan</span>
+          <p>
+            The birthplace of coffee. Floral aromatics, citrus clarity, and deeply expressive natural profiles.
+            Ethiopia anchors your high-acidity and specialty-forward offerings.
+          </p>
+        </article>
+        <article class="origin">
+          <h3>Colombia</h3>
+          <span class="meta">Huila & Nariño | 1,600-2,200m | Dual Harvest Cycles</span>
+          <p>
+            Structured sweetness and bright precision. From elegant washed cups to exotic high-end micro-lots,
+            Colombia supports both everyday premium menus and flagship reserve offerings.
+          </p>
+        </article>
+        <article class="origin">
+          <h3>Brazil</h3>
+          <span class="meta">Minas Gerais & Chapada Diamantina | 900-1,400m</span>
+          <p>
+            Foundational body and chocolate depth, ideal for espresso and milk-based programs.
+            Our Brazilian lots balance consistency with modern fermentation innovation.
+          </p>
+        </article>
+        <article class="origin">
+          <h3>India</h3>
+          <span class="meta">Coorg, Wayanad & Araku | 900-1,700m | Harvest: Nov-Feb</span>
+          <p>
+            Spiced complexity, earthy sweetness, and strong local identity. Indian coffees give your menu regional relevance
+            while maintaining specialty quality standards.
+          </p>
+        </article>
+      </div>
+
+      <div class="programs">
+        <h3>Programs We Build for Clients</h3>
+        <ul class="program-list">
+          <li>Wholesale supply for independent and multi-location cafes</li>
+          <li>Corporate coffee programs for offices and co-working spaces</li>
+          <li>Hospitality partnerships for hotels and guest experiences</li>
+          <li>Retail and private label packs for premium stores</li>
+          <li>Bar workflow training and recipe documentation</li>
+          <li>Seasonal menu rotation with farm-led story assets</li>
+        </ul>
+      </div>
+
+      <div class="contact-band">
+        <div class="contact-grid">
+          <div>
+            <h3>All coffees below are currently active in our 2026 portfolio.</h3>
+            <p>
+              The next two pages present the full catalog with flavor profile, processing details, roast style,
+              and pricing in a format designed for menu planning and procurement.
+            </p>
+          </div>
+          <div class="contact-card">
+            <div>Portfolio size: 12 coffees</div>
+            <div>Scoring range: SCA 85-97</div>
+            <div>Bag sizes: 200g / 250g</div>
+            <div>Roast cycle: weekly, fresh dispatch</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="top-bar"></div>
+    <div class="content">
+      <div class="catalog-title">
+        <p class="eyebrow">Complete Product Catalog</p>
+        <h2>Ethiopia and Colombia Portfolio</h2>
+        <p>Detailed product information for procurement teams, cafe menu planners, and tasting committees.</p>
+      </div>
+
+      <article class="product-block">
+        <div class="product-row">
+          <img src="https://images.unsplash.com/photo-1611854779393-1b2da9d400fe?w=700&q=80" alt="Yirgacheffe" />
+          <div class="product-copy">
+            <div class="product-head"><h4>Yirgacheffe <span class="tag">Award Winner</span></h4><span class="price">INR 1,850</span></div>
+            <p class="product-meta">Ethiopia | Gedeo Zone | Ethiopian Heirloom | Washed | Light Roast | 250g | SCA 94</p>
+            <p class="product-notes">Notes: Jasmine, Bergamot, Lemon Zest, Peach</p>
+            <p class="product-desc">Floral and citrus-led profile with high clarity; ideal for specialty pour-over menus and premium black coffee service.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-block">
+        <div class="product-row">
+          <img src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?w=700&q=80" alt="Sidama Natural" />
+          <div class="product-copy">
+            <div class="product-head"><h4>Sidama Natural <span class="tag">New</span></h4><span class="price">INR 1,980</span></div>
+            <p class="product-meta">Ethiopia | Sidama Zone | Ethiopian Heirloom | Natural | Light Roast | 250g | SCA 93</p>
+            <p class="product-notes">Notes: Blueberry, Dark Cherry, Cardamom, Wine</p>
+            <p class="product-desc">Fruit-forward natural cup with jammy sweetness and aromatic depth; strong choice for standout seasonal offerings.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-block">
+        <div class="product-row">
+          <img src="https://images.unsplash.com/photo-1600093463592-8e36ae95ef56?w=700&q=80" alt="Harrar Natural" />
+          <div class="product-copy">
+            <div class="product-head"><h4>Harrar Natural <span class="tag">Rare</span></h4><span class="price">INR 2,100</span></div>
+            <p class="product-meta">Ethiopia | Harrar Highland | Harrar Heirloom | Natural | Medium Roast | 250g | SCA 92</p>
+            <p class="product-notes">Notes: Blueberry Jam, Dark Chocolate, Wine, Dried Fig</p>
+            <p class="product-desc">Classic winey Harrar character with heavier body; excellent for signature black menu positioning.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-block">
+        <div class="product-row">
+          <img src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?w=700&q=80" alt="Huila Geisha" />
+          <div class="product-copy">
+            <div class="product-head"><h4>Huila Geisha <span class="tag">Limited</span></h4><span class="price">INR 2,400</span></div>
+            <p class="product-meta">Colombia | Huila Department | Geisha | Natural | Light Roast | 250g | SCA 96</p>
+            <p class="product-notes">Notes: Tropical Fruit, Rose, Honey, Papaya</p>
+            <p class="product-desc">High-aroma flagship lot for reserve menus and tasting flights; highly expressive in filter service.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-block">
+        <div class="product-row">
+          <img src="https://images.unsplash.com/photo-1495774856032-8b90bbb32b32?w=700&q=80" alt="Narino Washed" />
+          <div class="product-copy">
+            <div class="product-head"><h4>Narino Washed</h4><span class="price">INR 1,750</span></div>
+            <p class="product-meta">Colombia | Narino Department | Caturra | Washed | Medium Roast | 250g | SCA 91</p>
+            <p class="product-notes">Notes: Meyer Lemon, Green Apple, Black Tea, Almond</p>
+            <p class="product-desc">Balanced and structured profile for daily premium menu placement with broad customer appeal.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-block">
+        <div class="product-row">
+          <img src="https://images.unsplash.com/photo-1559056199-641a0ac8b55e?w=700&q=80" alt="Pink Bourbon" />
+          <div class="product-copy">
+            <div class="product-head"><h4>Pink Bourbon <span class="tag">Ultra Rare</span></h4><span class="price">INR 3,200</span></div>
+            <p class="product-meta">Colombia | Huila El Paraiso | Pink Bourbon | Anaerobic Washed | Light Roast | 200g | SCA 97</p>
+            <p class="product-notes">Notes: Strawberry, Raspberry, Champagne, White Peach</p>
+            <p class="product-desc">Prestige micro-lot for limited releases, chef collaborations, and premium tasting events.</p>
+          </div>
+        </div>
+      </article>
+
+      <div class="footer-strip">
+        <span>Page 3</span>
+        <span>Brown Theory 2026 Client Catalog</span>
+        <span>Ethiopia + Colombia</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="sheet">
+    <div class="top-bar"></div>
+    <div class="content">
+      <div class="catalog-title">
+        <p class="eyebrow">Complete Product Catalog</p>
+        <h2>Brazil and India Portfolio</h2>
+        <p>Includes core espresso builders, experimental lots, and region-led Indian signatures.</p>
+      </div>
+
+      <article class="product-block">
+        <div class="product-row">
+          <img src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?w=700&q=80" alt="Cerrado Reserve" />
+          <div class="product-copy">
+            <div class="product-head"><h4>Cerrado Reserve</h4><span class="price">INR 1,450</span></div>
+            <p class="product-meta">Brazil | Minas Gerais | Yellow Catuai | Natural | Medium Roast | 250g | SCA 90</p>
+            <p class="product-notes">Notes: Dark Chocolate, Hazelnut, Caramel, Brown Sugar</p>
+            <p class="product-desc">Reliable espresso base with chocolate-led depth and comfortable sweetness.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-block">
+        <div class="product-row">
+          <img src="https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?w=700&q=80" alt="Yellow Bourbon" />
+          <div class="product-copy">
+            <div class="product-head"><h4>Yellow Bourbon</h4><span class="price">INR 1,550</span></div>
+            <p class="product-meta">Brazil | Sul de Minas | Yellow Bourbon | Honey Process | Medium Roast | 250g | SCA 89</p>
+            <p class="product-notes">Notes: Milk Chocolate, Vanilla, Macadamia, Toffee</p>
+            <p class="product-desc">Creamy, mellow profile suited for milk beverages and approachable specialty menus.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-block">
+        <div class="product-row">
+          <img src="https://images.unsplash.com/photo-1486427944299-d1955d23e34d?w=700&q=80" alt="Fazenda Anaerobic" />
+          <div class="product-copy">
+            <div class="product-head"><h4>Fazenda Anaerobic <span class="tag">New</span></h4><span class="price">INR 2,800</span></div>
+            <p class="product-meta">Brazil | Chapada Diamantina | Yellow Bourbon | Anaerobic Natural | Medium Roast | 250g | SCA 93</p>
+            <p class="product-notes">Notes: Fermented Mango, Coconut, Rum, Brown Butter</p>
+            <p class="product-desc">Adventurous fermentation profile for modern cafes seeking conversation-starting cups.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-block">
+        <div class="product-row">
+          <img src="https://images.unsplash.com/photo-1568480289552-c9f20eca6304?w=700&q=80" alt="Coorg Monsooned" />
+          <div class="product-copy">
+            <div class="product-head"><h4>Coorg Monsooned</h4><span class="price">INR 1,650</span></div>
+            <p class="product-meta">India | Kodagu Karnataka | Kents | Monsoon Process | Dark Roast | 250g | SCA 88</p>
+            <p class="product-notes">Notes: Spice, Tobacco, Earthy, Cedar</p>
+            <p class="product-desc">Low-acidity classic with bold body, ideal for strong brews and regional preference profiles.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-block">
+        <div class="product-row">
+          <img src="https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?w=700&q=80" alt="Araku Valley" />
+          <div class="product-copy">
+            <div class="product-head"><h4>Araku Valley</h4><span class="price">INR 1,350</span></div>
+            <p class="product-meta">India | Andhra Pradesh | S795 | Washed | Light Roast | 250g | SCA 87</p>
+            <p class="product-notes">Notes: Wild Honey, Ginger, Orange Peel, Nuts</p>
+            <p class="product-desc">Layered sweetness with local character; excellent for storytelling and regional menus.</p>
+          </div>
+        </div>
+      </article>
+
+      <article class="product-block">
+        <div class="product-row">
+          <img src="https://images.unsplash.com/photo-1461023058943-07fcbe16d735?w=700&q=80" alt="Badra Estate" />
+          <div class="product-copy">
+            <div class="product-head"><h4>Badra Estate</h4><span class="price">INR 1,250</span></div>
+            <p class="product-meta">India | Wayanad Kerala | S795 Peaberry | Washed | Dark Roast | 250g | SCA 85</p>
+            <p class="product-notes">Notes: Dark Cocoa, Pepper, Clove, Sandalwood</p>
+            <p class="product-desc">Bold South-Indian leaning profile for high-strength brewing and traditional service formats.</p>
+          </div>
+        </div>
+      </article>
+
+      <div class="contact-band" style="margin-top: 3mm;">
+        <div class="contact-grid">
+          <div>
+            <h3>Ready to build your coffee menu?</h3>
+            <p>
+              Share your monthly volume and service model. We send a tailored tasting plan,
+              custom pricing proposal, and onboarding roadmap within 24 hours.
+            </p>
+          </div>
+          <div class="contact-card">
+            <div>Phone: +91 98765 43210</div>
+            <div>Email: hello@browntheory.coffee</div>
+            <div>Web: www.browntheory.coffee</div>
+            <div>Instagram: @browntheorycoffee</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-strip">
+        <span>Page 4</span>
+        <span>Brown Theory 2026 Client Catalog</span>
+        <span>Brazil + India</span>
+      </div>
+    </div>
+  </section>
+</body>
+</html>

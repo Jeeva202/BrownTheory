@@ -1,0 +1,204 @@
+.page { padding-top: 90px; min-height: 100vh; background: var(--bg); }
+.wrap {
+  max-width: 1100px; margin: 0 auto;
+  padding: 4rem 3rem 8rem;
+  display: grid;
+  grid-template-columns: 1fr 360px;
+  gap: 4rem; align-items: start;
+}
+
+.main {}
+.pageHead { margin-bottom: 2.5rem; }
+.heading {
+  font-family: var(--font-d);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 300; line-height: 1;
+  color: var(--text); margin-top: 0.5rem;
+}
+.heading em { font-style: italic; color: var(--gold); }
+
+.stepsRow {
+  display: flex; gap: 0;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 2.5rem;
+}
+.step {
+  flex: 1; padding: 0.75rem;
+  text-align: center;
+  font-size: 0.84rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--text-muted);
+  border-bottom: 1px solid transparent;
+  margin-bottom: -1px;
+  transition: all 0.3s;
+  display: flex; align-items: center; justify-content: center; gap: 0.3rem;
+}
+.stepActive { color: var(--gold); border-bottom-color: var(--gold) !important; }
+.stepDone { color: var(--text-dim); }
+
+.sectionTitle {
+  font-family: var(--font-d);
+  font-size: 1.8rem; font-weight: 300;
+  color: var(--text); margin-bottom: 0.3rem;
+}
+.sectionSub { font-size: 0.88rem; color: var(--text-muted); letter-spacing: 0.05em; margin-bottom: 2rem; }
+
+.formGrid {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 1rem; margin-bottom: 1.2rem;
+}
+.formGroup { display: flex; flex-direction: column; gap: 0.4rem; }
+.formGroup label {
+  font-size: 0.82rem; letter-spacing: 0.1em;
+  text-transform: uppercase; color: var(--text-muted);
+}
+.full { grid-column: 1 / -1; }
+.input {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.8rem 1rem;
+  font-size: 0.88rem; font-weight: 300;
+  outline: none; transition: border-color 0.3s;
+  letter-spacing: 0.04em;
+}
+.input:focus { border-color: rgba(201,169,110,0.55); }
+.input::placeholder { color: var(--text-dim); }
+.select {
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.8rem 1rem;
+  font-size: 0.88rem; font-weight: 300;
+  outline: none; cursor: pointer; width: 100%;
+}
+.select option { background: var(--bg-secondary); }
+
+.checkLabel {
+  display: flex; align-items: center; gap: 0.8rem;
+  cursor: pointer; margin-bottom: 1.5rem;
+  font-size: 0.82rem; color: var(--text-muted);
+}
+.checkLabel input { accent-color: var(--gold); width: 13px; height: 13px; cursor: pointer; }
+
+.radioGroup { display: flex; flex-direction: column; gap: 0.6rem; margin-bottom: 1.5rem; }
+.radioOpt {
+  display: flex; align-items: center; gap: 1rem;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  cursor: pointer;
+  transition: border-color 0.3s;
+}
+.radioOpt:hover { border-color: rgba(201,169,110,0.3); }
+.radioOpt input { accent-color: var(--gold); cursor: pointer; flex-shrink: 0; }
+.radioInfo { flex: 1; }
+.radioTitle { font-size: 0.84rem; color: var(--text); display: block; letter-spacing: 0.03em; }
+.radioSub { font-size: 0.82rem; color: var(--text-muted); margin-top: 0.15rem; display: block; }
+.radioPrice {
+  font-family: var(--font-d);
+  font-size: 1.1rem; font-weight: 300; color: var(--gold);
+  white-space: nowrap;
+}
+
+.secureNote {
+  display: flex; align-items: center; gap: 0.8rem;
+  padding: 1rem;
+  background: rgba(201,169,110,0.04);
+  border: 1px solid var(--border);
+  margin-bottom: 1.5rem;
+}
+.secureNote span { font-size: 0.84rem; color: var(--text-muted); }
+
+.nav {
+  display: flex; gap: 1rem; justify-content: flex-end;
+  margin-top: 2rem;
+}
+
+/* Confirmed */
+.confirmed { text-align: center; padding: 3rem 0; }
+.confirmedIcon {
+  width: 72px; height: 72px;
+  border: 1px solid var(--gold);
+  border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 2rem;
+}
+.confirmedTitle {
+  font-family: var(--font-d);
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-weight: 300; color: var(--text);
+  margin-bottom: 1rem;
+}
+.confirmedBody {
+  font-size: 0.8rem; line-height: 2;
+  color: var(--text-muted); max-width: 400px;
+  margin: 0 auto 2.5rem;
+}
+.orderId {
+  font-size: 0.86rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--gold);
+  margin-bottom: 2.5rem;
+}
+
+/* Summary */
+.summary {
+  background: var(--bg-secondary);
+  padding: 2rem;
+  border: 1px solid var(--border);
+  position: sticky; top: 110px;
+}
+.sumTitle {
+  font-family: var(--font-d);
+  font-size: 1.4rem; font-weight: 300;
+  color: var(--text); margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border);
+}
+.sumItems { margin-bottom: 1.5rem; display: flex; flex-direction: column; gap: 1rem; }
+.sumItem { display: flex; gap: 0.8rem; align-items: center; }
+.sumImg { width: 52px; height: 62px; overflow: hidden; background: var(--bg-card); flex-shrink: 0; }
+.sumImg img { width: 100%; height: 100%; object-fit: cover; }
+.sumInfo { flex: 1; }
+.sumName {
+  font-family: var(--font-d);
+  font-size: 0.95rem; font-weight: 300; color: var(--text);
+}
+.sumMeta { font-size: 0.82rem; letter-spacing: 0.05em; color: var(--text-muted); margin-top: 0.2rem; }
+.sumPrice { font-size: 0.84rem; color: var(--gold); white-space: nowrap; }
+
+.sumTotals {
+  border-top: 1px solid var(--border);
+  padding-top: 1.2rem;
+}
+.sumRow {
+  display: flex; justify-content: space-between;
+  margin-bottom: 0.6rem;
+  font-size: 0.82rem; color: var(--text-muted);
+}
+.sumTotal {
+  font-size: 0.85rem !important; color: var(--text) !important;
+  margin-top: 0.5rem; padding-top: 0.5rem;
+  border-top: 1px solid var(--border);
+  font-family: var(--font-d);
+}
+.sumTotal span:last-child { color: var(--gold) !important; font-size: 1.2rem; }
+
+.promoWrap {
+  margin-top: 1rem;
+  display: flex; gap: 0.5rem;
+}
+.promoInput {
+  flex: 1; background: transparent;
+  border: 1px solid var(--border);
+  color: var(--text);
+  padding: 0.6rem 0.8rem;
+  font-size: 0.8rem; font-weight: 300; outline: none;
+  letter-spacing: 0.05em;
+}
+.promoInput::placeholder { color: var(--text-dim); }
+.promoInput:focus { border-color: rgba(201,169,110,0.4); }
+
+@media (max-width: 900px) {
+  .wrap { grid-template-columns: 1fr; padding: 2rem 1.5rem 5rem; }
+  .summary { position: static; }
+  .stepsRow { overflow-x: auto; }
+}

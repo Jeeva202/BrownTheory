@@ -1,0 +1,115 @@
+.footer {
+  background: var(--bg-card2);
+  padding: 6rem 3rem 3rem;
+  position: relative;
+  overflow: hidden;
+}
+.wordmark {
+  position: absolute;
+  top: 50%; left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: var(--font-d);
+  font-size: 18rem;
+  font-weight: 300;
+  color: rgba(201,169,110,0.025);
+  white-space: nowrap;
+  pointer-events: none;
+  letter-spacing: 0.2em;
+  user-select: none;
+}
+.inner { max-width: 1380px; margin: 0 auto; position: relative; }
+
+.top {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 4rem;
+  margin-bottom: 4rem;
+}
+
+.brand {}
+.logo {
+  font-family: var(--font-d);
+  font-size: 1.8rem;
+  font-weight: 300;
+  letter-spacing: 0.2em;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+.logo span { color: var(--gold); }
+.tagline {
+  font-size: 0.85rem;
+  line-height: 2;
+  color: var(--text-muted);
+  max-width: 270px;
+  margin-bottom: 2rem;
+}
+.social { display: flex; gap: 0.7rem; }
+.socBtn {
+  width: 34px; height: 34px;
+  border: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  transition: all 0.3s;
+  text-decoration: none;
+}
+.socBtn:hover { border-color: var(--gold); background: rgba(201,169,110,0.08); }
+
+.col h4 {
+  font-size: 0.84rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 1.3rem;
+}
+.col ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.7rem;
+}
+.col button,
+.col a,
+.col span {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  background: transparent;
+  transition: color 0.3s;
+  letter-spacing: 0.04em;
+  text-decoration: none;
+  font-family: var(--font-b);
+  font-weight: 300;
+}
+.col button:hover,
+.col a:hover { color: var(--text); }
+
+.bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid var(--border);
+  padding-top: 2rem;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+.copy { font-size: 0.84rem; color: var(--text-dim); letter-spacing: 0.03em; }
+.legal { display: flex; gap: 1.5rem; }
+.legal button {
+  font-size: 0.84rem;
+  color: var(--text-dim);
+  background: transparent;
+  transition: color 0.3s;
+  font-family: var(--font-b);
+  font-weight: 300;
+}
+.legal button:hover { color: var(--gold); }
+
+@media (max-width: 900px) {
+  .footer { padding: 4rem 1.5rem 2.5rem; }
+  .top { grid-template-columns: 1fr 1fr; gap: 2.5rem; }
+  .wordmark { display: none; }
+}
+@media (max-width: 600px) {
+  .top { grid-template-columns: 1fr; }
+}
