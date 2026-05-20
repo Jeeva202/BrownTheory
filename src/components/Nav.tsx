@@ -1,7 +1,7 @@
 import { useState, useEffect } from 'react';
 import { useApp } from '../AppContext';
 import { useTheme } from '../ThemeContext';
-import { ShoppingBag, Search, Heart, Sun, Moon, X, Menu } from 'lucide-react';
+import { ShoppingBag, Search, Sun, Moon, X, Menu } from 'lucide-react';
 import styles from './Nav.module.css';
 
 export default function Nav() {
